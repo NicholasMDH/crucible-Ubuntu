@@ -1,6 +1,6 @@
-# Typecraft's Crucible 🛠️
+# NicholasMDH's fork of Typecraft's Crucible 🛠️
 
-An Arch Linux System Tool that automates the setup and configuration of an Arch Linux system with Gnome. It installs and configures packages, desktop environments, and various utilities to create a fully functional development environment.
+My version of [Typecraft's Crucible project](https://github.com/typecraft-dev/crucible) that I have modified to install my preferred packages and configurations for Ubuntu.
 
 ## Features
 
@@ -13,15 +13,15 @@ An Arch Linux System Tool that automates the setup and configuration of an Arch 
   - Office applications
   - Media packages
   - Fonts
-- 🛠️ Automatic installation of yay AUR helper
-- 🖥️ GNOME desktop environment setup with tiling-like features
+- 🛠️ All of my favorite scripts for automating Linux
+- 🖥️ i3 Window manager (no DE for me!)
 - 🎮 Flatpak integration for specific applications
 - ⚙️ Automatic service configuration
 - 🔧 GNOME extensions and hotkey configuration
 
 ## Prerequisites
 
-- A fresh Arch Linux installation
+- A fresh Ubuntu Linux installation
 - Internet connection
 - sudo privileges
 
@@ -30,7 +30,7 @@ An Arch Linux System Tool that automates the setup and configuration of an Arch 
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/typecraft-dev/crucible.git
+git clone https://github.com/NicholasMDH/crucible-Ubuntu
 ```
 
 2. Run the setup script:
@@ -44,3 +44,6 @@ git clone https://github.com/typecraft-dev/crucible.git
 4. The script will handle the rest of the setup process.
 
 5. After the setup is complete, you can reboot your system to see the changes.
+
+# Credit where credit is due!
+This is a fork of [Typecraft's Crucible project](https://github.com/typecraft-dev/crucible), all I did was customize it to suit my needs, thanks nerd. Check out his content on [YouTube](https://www.youtube.com/@typecraft_dev), he's a great person to follow for neovim/linux stuff.
