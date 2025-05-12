@@ -1,8 +1,11 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 set -e
 
-if ! pacman -Q tmux &>/dev/null; then
+# Source utility functions
+source utils.sh
+
+if ! is_installed "tmux"; then
   echo "tmux is not installed."
   exit 1
 fi
@@ -20,11 +23,13 @@ fi
 echo "TPM installed successfully!"
 echo "Now opening tmux session and installing plugins..."
 
+# Create new "tpm_install_session" tmux session
 tmux new-session -d -s tpm_install_session
 
-# I use C-s as my prefix for tmux. if you don't have that. change this line
-tmux send-keys -t tpm_install_session C-s "I" C-m
+# Install tmux packages by calling the binary directly
+"$TPM_DIR/bin/install_plugins"
 
+# Attach to the created session
 tmux attach -t tpm_install_session
 
 exit 0

@@ -47,29 +47,27 @@ fi
 
 # Update the system first
 echo "Updating system..."
-sudo pacman -Syu --noconfirm
+sudo apt update -y
 
-# Install yay AUR helper if not present
-if ! command -v yay &> /dev/null; then
-  echo "Installing yay AUR helper..."
-  sudo pacman -S --needed git base-devel --noconfirm
-  if [[ ! -d "yay" ]]; then
-    echo "Cloning yay repository..."
-  else
-    echo "yay directory already exists, removing it..."
-    rm -rf yay
-  fi
+# Upgrade all currently installed packages
+echo "Upgrading packages..."
+sudo apt full-upgrade -y
 
-  git clone https://aur.archlinux.org/yay.git
+# Remove all unnecessary packages
+echo "Removing unnecessary packages..."
+sudo apt autoremove -y
 
-  cd yay
-  echo "building yay.... yaaaaayyyyy"
-  makepkg -si --noconfirm
-  cd ..
-  rm -rf yay
-else
-  echo "yay is already installed"
-fi
+# Refresh currently installed snap packages
+echo "Refreshing snaps..."
+sudo snap refresh
+
+# Remove old revisions of snap packages
+echo "Removing old snap revisions..."
+set -eu
+snap list --all | awk '/disabled/{print $1, $3}' |
+    while read snapname revision; do
+        snap remove "$snapname" --revision="$revision"
+    done
 
 # Install packages by category
 if [[ "$DEV_ONLY" == true ]]; then
@@ -121,9 +119,9 @@ else
   echo "Configuring Gnome..."
   . gnome/gnome-settings.sh
   
-  # Some programs just run better as flatpaks. Like discord/spotify
-  echo "Installing flatpaks (like discord and spotify)"
-  . install-flatpaks.sh
+  # Some programs just run better as snaps. Like discord/spotify
+  echo "Installing snaps (like discord and spotify)"
+  . install-snaps.sh
 fi
 
 echo "Setup complete! You may want to reboot your system."
