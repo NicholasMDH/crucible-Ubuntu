@@ -13,9 +13,10 @@ My version of [Typecraft's Crucible project](https://github.com/typecraft-dev/cr
   - Office applications
   - Media packages
   - Fonts
-- 🛠️ All of my favorite scripts for automating Linux
+- 📄 All of my favorite scripts for automating Linux
 - 🖥️ i3 Window manager (no DE for me!)
-- 🎮 Flatpak integration for specific applications
+- 🛠️ Remap the CapsLock key to Escape (set in i3 config)
+- 🎮 Snap integration for specific applications
 - ⚙️ Automatic service configuration
 - 🔧 GNOME extensions and hotkey configuration
 
@@ -46,4 +47,5 @@ git clone https://github.com/NicholasMDH/crucible-Ubuntu
 5. After the setup is complete, you can reboot your system to see the changes.
 
 # Credit where credit is due!
-This is a fork of [Typecraft's Crucible project](https://github.com/typecraft-dev/crucible), all I did was customize it to suit my needs, thanks nerd. Check out his content on [YouTube](https://www.youtube.com/@typecraft_dev), he's a great person to follow for neovim/linux stuff.
+This is a fork of [Typecraft's Crucible project](https://github.com/typecraft-dev/crucible), all I did was customize it to suit my needs, thanks nerd.
+Check out his content on [YouTube](https://www.youtube.com/@typecraft_dev), he's a great person to follow for neovim/linux stuff.

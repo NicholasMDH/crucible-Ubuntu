@@ -122,6 +122,10 @@ else
   # Some programs just run better as snaps. Like discord/spotify
   echo "Installing snaps (like discord and spotify)"
   . install-snaps.sh
+
+  # Set up tmux
+  echo "Installing tpm and tmux extensions..."
+  . install-tpm.sh
 fi
 
 echo "Setup complete! You may want to reboot your system."

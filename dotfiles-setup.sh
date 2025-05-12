@@ -1,15 +1,13 @@
 #!/bin/bash
 
 ORIGINAL_DIR=$(pwd)
-REPO_URL="https://github.com/typecraft-dev/dotfiles"
-REPO_NAME="dotfiles"
+REPO_URL="https://github.com/NicholasMDH/dotfiles"
+REPO_NAME="~/dotfiles"
 
+# Source utility functions
+source utils.sh
 
-is_stow_installed() {
-  pacman -Qi "stow" &> /dev/null
-}
-
-if ! is_stow_installed; then
+if ! is_installed "stow"; then
   echo "Install stow first"
   exit 1
 fi
@@ -26,9 +24,13 @@ fi
 # Check if the clone was successful
 if [ $? -eq 0 ]; then
   cd "$REPO_NAME"
-  stow zshrc
-  stow nvim
-  stow starship
+
+  # Run `stow` for each subdirectory
+  for dir in */; do
+      # Skip .git and any non-stow directories
+      [[ "$dir" == ".git/" ]] && continue
+      stow "${dir%/}"
+  done
 else
   echo "Failed to clone the repository."
   exit 1

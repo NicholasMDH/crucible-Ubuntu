@@ -21,16 +21,10 @@ else
 fi
 
 echo "TPM installed successfully!"
-echo "Now opening tmux session and installing plugins..."
-
-# Create new "tpm_install_session" tmux session
-tmux new-session -d -s tpm_install_session
+echo "Now installing plugins..."
 
 # Install tmux packages by calling the binary directly
 "$TPM_DIR/bin/install_plugins"
-
-# Attach to the created session
-tmux attach -t tpm_install_session
 
 exit 0
 
