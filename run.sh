@@ -6,8 +6,8 @@ print_logo() {
     ______                _ __    __     
    / ____/______  _______(_) /_  / /__   
   / /   / ___/ / / / ___/ / __ \/ / _ \  
- / /___/ /  / /_/ / /__/ / /_/ / /  __/  Arch Linux System Crafting Tool
- \____/_/   \__,_/\___/_/_.___/_/\___/   by: typecraft
+ / /___/ /  / /_/ / /__/ / /_/ / /  __/  Ubuntu Linux System Crafting Tool
+ \____/_/   \__,_/\___/_/_.___/_/\___/   by: Nicholas (fork of typecraft)
 
 EOF
 }
@@ -111,11 +111,7 @@ else
     fi
   done
   
-  # Install gnome specific things to make it like a tiling WM
-  echo "Installing Gnome extensions..."
-  . gnome/gnome-extensions.sh
-  echo "Setting Gnome hotkeys..."
-  . gnome/gnome-hotkeys.sh
+  # Configure gnome
   echo "Configuring Gnome..."
   . gnome/gnome-settings.sh
   
