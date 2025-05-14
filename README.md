@@ -4,17 +4,15 @@ My version of [Typecraft's Crucible project](https://github.com/typecraft-dev/cr
 
 ## Features
 
-- 🔄 Automated system updates
+- 🔄 Automated system & package updates
 - 📦 Package installation by categories:
   - System utilities
   - Development tools
   - System maintenance tools
-  - Desktop environment
-  - Office applications
+  - Desktop environment (i3 tiling window manager)
   - Media packages
   - Fonts
 - 📄 All of my favorite scripts for automating Linux
-- 🖥️ i3 Window manager (no DE for me!)
 - 🛠️ Remap the CapsLock key to Escape (set in i3 config)
 - 🎮 Snap integration for specific applications
 - ⚙️ Automatic service configuration
@@ -46,6 +44,15 @@ git clone https://github.com/NicholasMDH/crucible-Ubuntu
 
 5. After the setup is complete, you can reboot your system to see the changes.
 
+# Changelog
+This is just v0 of the tool to get a basic setup, there are still various things I want to add, like:
+- The programming languages I use most often (Python, C++, and Rust)
+- Office tools
+- Miscellaneous tools/apt packages that I forgot to include in the original script
+- A custom mode to allow you to choose which blocks of packages to install (replacing/refactoring dev mode)
+
+Also, feel free to reach out or submit issues/PRs with any changes you'd like to see made!
+
 # Credit where credit is due!
-This is a fork of [Typecraft's Crucible project](https://github.com/typecraft-dev/crucible), all I did was customize it to suit my needs, thanks nerd.
+This is a fork of [Typecraft's Crucible project](https://github.com/typecraft-dev/crucible), all I did was customize it to suit my needs. Thanks, nerd.
 Check out his content on [YouTube](https://www.youtube.com/@typecraft_dev), he's a great person to follow for neovim/linux stuff.

@@ -7,7 +7,7 @@ print_logo() {
    / ____/______  _______(_) /_  / /__   
   / /   / ___/ / / / ___/ / __ \/ / _ \  
  / /___/ /  / /_/ / /__/ / /_/ / /  __/  Ubuntu Linux System Crafting Tool
- \____/_/   \__,_/\___/_/_.___/_/\___/   by: Nicholas (fork of typecraft)
+ \____/_/   \__,_/\___/_/_.___/_/\___/   by: Typecraft (forked by NicholasMDH)
 
 EOF
 }
@@ -111,13 +111,17 @@ else
     fi
   done
   
-  # Configure gnome
-  echo "Configuring Gnome..."
-  . gnome/gnome-settings.sh
-  
   # Some programs just run better as snaps. Like discord/spotify
-  echo "Installing snaps (like discord and spotify)"
+  echo "Installing snaps..."
   . install-snaps.sh
+  
+  # Configure terminal
+  echo "Configuring Terminal..."
+  . install-terminal.sh
+
+  # Install dotfiles
+  echo "Installing dotfiles/configurations..."
+  . dotfiles-setup.sh
 
   # Set up tmux
   echo "Installing tpm and tmux extensions..."
@@ -125,3 +129,4 @@ else
 fi
 
 echo "Setup complete! You may want to reboot your system."
+
