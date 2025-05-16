@@ -2,7 +2,7 @@
 
 # Get the directory where this script is located
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-FONTS_DIR="$HOME/.local/fonts/"
+FONTS_DIR="$HOME/.local/fonts"
 
 # Dark theme
 gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
