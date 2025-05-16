@@ -17,5 +17,5 @@ mkdir -p "$FONTS_DIR"
 unzip /tmp/JetBrainsMono.zip -d "$FONTS_DIR"
 
 # Apply Gnome terminal settings (Had to install the font first)
-dconf load /org/gnome/terminal/ < "$FONTS_DIR/terminal-settings.dconf"
+dconf load /org/gnome/terminal/ < "$SCRIPT_DIR/terminal-settings.dconf"
 
