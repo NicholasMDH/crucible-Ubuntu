@@ -16,3 +16,6 @@ unzip /tmp/JetBrainsMono.zip -d "$FONTS_DIR"
 
 # Apply Gnome terminal settings (Had to install the font first)
 dconf load /org/gnome/terminal/ < ./terminal-settings.dconf
+
+# Install Starship terminal
+curl -sS https://starship.rs/install.sh | sh
