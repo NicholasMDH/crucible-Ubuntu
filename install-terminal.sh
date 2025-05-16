@@ -1,7 +1,5 @@
 #!/usr/bin/bash
 
-# Get the directory where this script is located
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 FONTS_DIR="$HOME/.local/fonts"
 
 # Dark theme
@@ -17,5 +15,4 @@ mkdir -p "$FONTS_DIR"
 unzip /tmp/JetBrainsMono.zip -d "$FONTS_DIR"
 
 # Apply Gnome terminal settings (Had to install the font first)
-dconf load /org/gnome/terminal/ < "$SCRIPT_DIR/terminal-settings.dconf"
-
+dconf load /org/gnome/terminal/ < ./terminal-settings.dconf
