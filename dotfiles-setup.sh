@@ -2,7 +2,7 @@
 
 ORIGINAL_DIR=$(pwd)
 REPO_URL="https://github.com/NicholasMDH/dotfiles"
-REPO_NAME="~/dotfiles"
+REPO_NAME="dotfiles"
 
 # Source utility functions
 source utils.sh
@@ -29,7 +29,7 @@ if [ $? -eq 0 ]; then
   for dir in */; do
       # Skip .git and any non-stow directories
       [[ "$dir" == ".git/" ]] && continue
-      stow "${dir%/}"
+      stow "${dir%/}" --override
   done
 else
   echo "Failed to clone the repository."
