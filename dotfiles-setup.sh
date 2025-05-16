@@ -29,7 +29,7 @@ if [ $? -eq 0 ]; then
   for dir in */; do
       # Skip .git and any non-stow directories
       [[ "$dir" == ".git/" ]] && continue
-      stow "${dir%/}" --override
+      stow --override "${dir%/}"
   done
 else
   echo "Failed to clone the repository."
