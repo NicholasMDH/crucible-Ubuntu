@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 # Print the logo
 print_logo() {
@@ -113,7 +113,7 @@ else
   
   # Some programs just run better as snaps. Like discord/spotify
   echo "Installing snaps..."
-  . install-snaps.sh
+  sudo ./install-snaps.sh
   
   # Configure terminal
   echo "Configuring Terminal..."

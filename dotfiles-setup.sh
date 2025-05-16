@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 ORIGINAL_DIR=$(pwd)
 REPO_URL="https://github.com/NicholasMDH/dotfiles"
