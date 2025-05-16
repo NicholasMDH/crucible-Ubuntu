@@ -24,12 +24,17 @@ fi
 # Check if the clone was successful
 if [ $? -eq 0 ]; then
   cd "$REPO_NAME"
+  pwd # TEST
+
+  # Have to remove the original .bashrc before I can stow mine
+  mv ~/.bashrc ~/.bashrc.bak
 
   # Run `stow` for each subdirectory
   for dir in */; do
       # Skip .git and any non-stow directories
       [[ "$dir" == ".git/" ]] && continue
-      stow --override "${dir%/}"
+      echo "Stowing $dir"
+      stow "${dir%/}"
   done
 else
   echo "Failed to clone the repository."
