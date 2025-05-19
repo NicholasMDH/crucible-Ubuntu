@@ -2,22 +2,21 @@
 
 # Function to check if a package is installed
 is_installed() {
-  dpkg-query -W "$1" &> /dev/null
+#   dpkg-query -W "$1" &> /dev/null
+  which "$1" &>/dev/null # Also look into 'command -v "$1" &>/dev/null
 }
 
 # Function to install packages if not already installed
 install_packages() {
   local packages=("$@")
-  local to_install=()
 
   for pkg in "${packages[@]}"; do
     if ! is_installed "$pkg"; then
-      to_install+=("$pkg")
+      echo "[ MISS ] $pkg will be installed"
+      sudo apt install -y "$pkg"
+      echo "[ OK ] $pkg is installed"
+    else
+      echo "[ OK ] $pkg is installed"
     fi
   done
-
-  if [ ${#to_install[@]} -ne 0 ]; then
-    echo "Installing: ${to_install[*]}"
-    sudo apt install -y "${to_install[@]}"
-  fi
 } 

@@ -24,7 +24,6 @@ fi
 # Check if the clone was successful
 if [ $? -eq 0 ]; then
   cd "$REPO_NAME"
-  pwd # TEST
 
   # Have to remove the original .bashrc before I can stow mine
   mv ~/.bashrc ~/.bashrc.bak
@@ -41,3 +40,5 @@ else
   exit 1
 fi
 
+# cd back into original directory so install-tpm.sh works
+cd "$ORIGINAL_DIR"
