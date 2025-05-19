@@ -40,5 +40,10 @@ else
   exit 1
 fi
 
+# Add ~/bin to PATH if it exists and isn't already in PATH
+if [ -d "$HOME/bin" ] && [[ ":$PATH:" != *":$HOME/bin:"* ]]; then
+    export PATH="$HOME/bin:$PATH"
+fi
+
 # cd back into original directory so install-tpm.sh works
 cd "$ORIGINAL_DIR"
