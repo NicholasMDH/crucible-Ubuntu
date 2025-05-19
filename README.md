@@ -44,15 +44,6 @@ git clone https://github.com/NicholasMDH/crucible-Ubuntu
 
 5. After the setup is complete, you can reboot your system to see the changes.
 
-# Changelog
-This is just v0 of the tool to get a basic setup, there are still various things I want to add, like:
-- The programming languages I use most often (Python, C++, and Rust)
-- Office tools
-- Miscellaneous tools/apt packages that I forgot to include in the original script
-- A custom mode to allow you to choose which blocks of packages to install (replacing/refactoring dev mode)
-
-Also, feel free to reach out or submit issues/PRs with any changes you'd like to see made!
-
 # Credit where credit is due!
 This is a fork of [Typecraft's Crucible project](https://github.com/typecraft-dev/crucible), all I did was customize it to suit my needs. Thanks, nerd.
 Check out his content on [YouTube](https://www.youtube.com/@typecraft_dev), he's a great person to follow for neovim/linux stuff.
