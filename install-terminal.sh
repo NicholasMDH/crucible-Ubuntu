@@ -29,6 +29,7 @@ dconf load /org/gnome/terminal/ < ./terminal-settings.dconf
 
 # Install Starship terminal
 if ! which starship &>/dev/null; then
+  echo "Installing Starship"
   curl -sS https://starship.rs/install.sh | sh
 else
   echo "Starship already installed"
@@ -44,6 +45,7 @@ fi
 
 # Install uv (installs to .local/bin)
 if ! which uv &>/dev/null; then
+  echo "Installing uv"
   curl -LsSf https://astral.sh/uv/install.sh | sh
 else
   echo "uv already installed"
@@ -51,6 +53,7 @@ fi
 
 # Install Rust (have to check if cargo is installed)
 if ! which cargo &>/dev/null; then
+  echo "Installing Rust"
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 else
   echo "Rust/Cargo already installed"

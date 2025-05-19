@@ -121,7 +121,7 @@ else
 
   # Install dotfiles
   echo "Installing dotfiles/configurations..."
-  . dotfiles-setup.sh
+  . install-dotfiles.sh
 
   # Set up tmux
   echo "Installing tpm and tmux extensions..."
