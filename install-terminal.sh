@@ -28,4 +28,8 @@ fi
 dconf load /org/gnome/terminal/ < ./terminal-settings.dconf
 
 # Install Starship terminal
-curl -sS https://starship.rs/install.sh | sh
+if ! which starship &>/dev/null; then
+  curl -sS https://starship.rs/install.sh | sh
+else
+  echo "Starship already installed"
+fi

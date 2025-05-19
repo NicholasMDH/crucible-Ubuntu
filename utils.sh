@@ -14,9 +14,7 @@ install_packages() {
     if ! is_installed "$pkg"; then
       echo "[ MISS ] $pkg will be installed"
       sudo apt install -y "$pkg"
-      echo "[ OK ] $pkg is installed"
-    else
-      echo "[ OK ] $pkg is installed"
     fi
+    echo "[ OK ] $pkg is installed"
   done
 } 
