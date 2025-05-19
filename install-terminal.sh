@@ -33,3 +33,25 @@ if ! which starship &>/dev/null; then
 else
   echo "Starship already installed"
 fi
+
+# Create .local/bin directory
+mkdir -p ~/.local/bin
+
+# Add ~/.local/bin to PATH if it exists and isn't already in PATH
+if [ -d "$HOME/.local/bin" ] && [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
+    export PATH="$HOME/.local/bin:$PATH"
+fi
+
+# Install uv (installs to .local/bin)
+if ! which uv &>/dev/null; then
+  curl -LsSf https://astral.sh/uv/install.sh | sh
+else
+  echo "uv already installed"
+fi
+
+# Install Rust (have to check if cargo is installed)
+if ! which cargo &>/dev/null; then
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+else
+  echo "Rust/Cargo already installed"
+fi
