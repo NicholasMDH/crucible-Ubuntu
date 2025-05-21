@@ -29,6 +29,7 @@ if [ $? -eq 0 ]; then
   stow zshrc
   stow nvim
   stow starship
+  stow tmux
 else
   echo "Failed to clone the repository."
   exit 1

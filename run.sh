@@ -124,6 +124,14 @@ else
   # Some programs just run better as flatpaks. Like discord/spotify
   echo "Installing flatpaks (like discord and spotify)"
   . install-flatpaks.sh
+
+  # Install dotfiles
+  echo "Installing dotfiles/configurations..."
+  . dotfiles-setup.sh 
+
+  # Install TPM
+  echo "Installing TPM and TMUX extensions..."
+  . install-tpm.sh
 fi
 
 echo "Setup complete! You may want to reboot your system."
