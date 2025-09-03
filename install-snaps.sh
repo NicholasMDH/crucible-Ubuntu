@@ -4,6 +4,7 @@ SNAPS=(
   "spotify"
   "discord"
   "htop"
+  "signal-desktop"
 )
 
 CLASSIC_SNAPS=(

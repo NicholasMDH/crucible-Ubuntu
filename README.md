@@ -35,7 +35,7 @@ git clone https://github.com/NicholasMDH/crucible-Ubuntu
 2. Run the setup script:
 
 ```bash
-./run.sh
+cd crucible-Ubuntu && ./run.sh
 ```
 
 3. Follow the prompts to select the packages you want to install.

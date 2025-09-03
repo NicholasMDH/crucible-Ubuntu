@@ -26,5 +26,3 @@ echo "Now installing plugins..."
 # Install tmux packages by calling the binary directly
 "$TPM_DIR/bin/install_plugins"
 
-exit 0
-
