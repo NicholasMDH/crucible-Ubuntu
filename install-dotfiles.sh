@@ -25,8 +25,14 @@ fi
 if [ $? -eq 0 ]; then
   cd "$REPO_NAME"
 
-  # Have to remove the original .bashrc before I can stow mine
-  mv ~/.bashrc ~/.bashrc.bak
+  # Remove .bashrc & .zshrc
+  if [ -f "$HOME/.bashrc" ]; then
+    rm "$HOME/.bashrc"
+  fi
+
+  if [ -f "$HOME/.zshrc" ]; then
+    rm "$HOME/.zshrc"
+  fi
 
   # Run `stow` for each subdirectory
   for dir in */; do

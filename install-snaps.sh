@@ -8,9 +8,10 @@ SNAPS=(
 )
 
 CLASSIC_SNAPS=(
-  "code" # --classic
-  "obsidian" # --classic
-  "nvim" # --classic
+  "code"
+  "obsidian"
+  "nvim"
+  "dotnet"
 )
 
 for snap in "${SNAPS[@]}"; do
