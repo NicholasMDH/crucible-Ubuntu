@@ -29,7 +29,7 @@ My version of [Typecraft's Crucible project](https://github.com/typecraft-dev/cr
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/NicholasMDH/crucible-Ubuntu
+git clone git@github.com:NicholasMDH/crucible-Ubuntu.git
 ```
 
 2. Run the setup script:

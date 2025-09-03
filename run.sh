@@ -119,6 +119,10 @@ else
   echo "Configuring Terminal..."
   . install-terminal.sh
 
+  # Configure zsh
+  echo "Configuring Zsh..."
+  . install-zsh.sh
+
   # Install dotfiles
   echo "Installing dotfiles/configurations..."
   . install-dotfiles.sh
