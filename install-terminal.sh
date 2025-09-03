@@ -58,3 +58,16 @@ if ! which cargo &>/dev/null; then
 else
   echo "Rust/Cargo already installed"
 fi
+
+# Declutter my home directory
+if [ -d "$HOME/Music" ] then
+  rm -rf "$HOME/Music"
+fi
+
+if [ -d "$HOME/Templates" ] then
+  rm -rf "$HOME/Templates"
+fi
+
+if [ -d "$HOME/Videos" ] then
+  rm -rf "$HOME/Videos"
+fi
