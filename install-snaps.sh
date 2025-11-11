@@ -12,6 +12,7 @@ CLASSIC_SNAPS=(
   "obsidian"
   "nvim"
   "dotnet"
+  "yazi"
 )
 
 for snap in "${SNAPS[@]}"; do
