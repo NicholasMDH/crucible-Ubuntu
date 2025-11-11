@@ -3,7 +3,6 @@
 SNAPS=(
   "spotify"
   "discord"
-  "htop"
   "signal-desktop"
 )
 
